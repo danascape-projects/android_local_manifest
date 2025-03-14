@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="gitea"
+            fetch="https://gitea.com" />
+ 
+   <remote  name="gitea-ssh"
+            fetch="ssh://git@gitea.com" 
+            revision="refs/heads/lineage-22.1" />
+
+  <project path="device/nothing/Pong" name="Nothing-phone-2-Development/android_device_nothing_Pong" />
+  <project path="hardware/nothing" name="Nothing-phone-2-Development/android_hardware_nothing" />
+  <project path="kernel/nothing/sm8475" name="Nothing-phone-2-Development/android_kernel_nothing_sm8475" />
+  <project path="kernel/nothing/sm8475-devicetrees" name="Nothing-phone-2-Development/android_kernel_nothing_sm8475-devicetrees" />
+  <project path="kernel/nothing/sm8475-modules" name="Nothing-phone-2-Development/android_kernel_nothing_sm8475-modules" />
+  <project path="vendor/nothing/Pong" name="chandu078/proprietary_vendor_nothing_Pong" remote="gitea" />
+
+</manifest>
