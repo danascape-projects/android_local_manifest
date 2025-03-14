@@ -8,6 +8,7 @@
             fetch="ssh://git@gitea.com" 
             revision="refs/heads/lineage-22.1" />
 
+  <!-- Device Specific Configuration -->
   <project path="device/nothing/Pong" name="Nothing-phone-2-Development/android_device_nothing_Pong" />
   <project path="hardware/nothing" name="Nothing-phone-2-Development/android_hardware_nothing" />
   <project path="kernel/nothing/sm8475" name="Nothing-phone-2-Development/android_kernel_nothing_sm8475" />
@@ -15,4 +16,17 @@
   <project path="kernel/nothing/sm8475-modules" name="Nothing-phone-2-Development/android_kernel_nothing_sm8475-modules" />
   <project path="vendor/nothing/Pong" name="chandu078/proprietary_vendor_nothing_Pong" remote="gitea" />
 
+  <!-- Sepolicy -->
+  <remove-project path="device/qcom/sepolicy_vndr/sm8450" name="LineageOS/android_device_qcom_sepolicy_vndr" groups="qcom,waipio-vendor" revision="lineage-22.1-caf-sm8450" />
+
+  <project path="device/qcom/sepolicy_vndr/sm8450" name="Nothing-phone-2-Development/android_device_qcom_sepolicy_vndr" groups="qcom,waipio-vendor" revision="lineage-22.1-caf-sm8450" />
+
+  <!-- HALs -->
+  <remove-project path="hardware/qcom-caf/sm8450/audio/pal" name="LineageOS/android_vendor_qcom_opensource_arpal-lx" groups="qcom,waipio-vendor" revision="lineage-22.1-caf-sm8450" />
+  <remove-project path="hardware/qcom-caf/sm8450/audio/primary-hal" name="LineageOS/android_hardware_qcom_audio-ar" groups="qcom,waipio-vendor" revision="lineage-22.1-caf-sm8450" />
+  <remove-project path="hardware/qcom-caf/sm8450/display" name="LineageOS/android_hardware_qcom_display" groups="qcom" revision="lineage-22.1-caf-sm8450" />
+
+  <project path="hardware/qcom-caf/sm8450/audio/pal" name="Nothing-phone-2-Development/android_vendor_qcom_opensource_arpal-lx" groups="qcom,waipio-vendor" revision="lineage-22.1-caf-sm8450" />
+  <project path="hardware/qcom-caf/sm8450/audio/primary-hal" name="Nothing-phone-2-Development/android_hardware_qcom_audio-ar" groups="qcom,waipio-vendor" revision="lineage-22.1-caf-sm8450" />
+  <project path="hardware/qcom-caf/sm8450/display" name="Nothing-phone-2-Development/android_hardware_qcom_display" groups="qcom" revision="lineage-22.1-caf-sm8450" />
 </manifest>
